@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #fff8f0;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?restaurant,food') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .menu {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff5722;
+  }
+  
+  .food-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .food-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  .food-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .food-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  .food-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .food-card h3 {
+    padding: 15px;
+    background: #fff8f0;
+    color: #ff5722;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .food-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
